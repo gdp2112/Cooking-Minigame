@@ -2,17 +2,44 @@
 <html land="eng">
 <head>
     <meta charset="UTF-8">
-    <script src=../cooking.js></script>
+    <link rel="stylesheet" href="cooking.css">
     <title>BOTW cooking minigame</title>
 </head>
 <header>
-
+    <div id="header-space">Header</div>
 </header>
 <nav>
-
+    <div>
+        <button type="button" class="nav"></button>
+        <button type="button" class="nav"></button>
+    </div>
 </nav>
 <body>
-
+    <div id="ingredients">
+        <div id="meat">
+            <button type="button" class="selection" id="Select1">Meat 1</button>
+            <button type="button" class="selection" id="Select2">Meat 2</button>
+            <button type="button" class="selection" id="Select3">Meat 3</button>
+        </div>
+        <div id="veggies">
+            <button type="button" class="selection" id="Select1">Veggie 1</button>
+            <button type="button" class="selection" id="Select2">Veggie 2</button>
+            <button type="button" class="selection" id="Select3">Veggie 3</button>
+        </div>
+        <div id="other">
+            <button type="button" class="selection" id="Select1">Other 1</button>
+            <button type="button" class="selection" id="Select2">Other 2</button>
+            <button type="button" class="selection" id="Select3">Other 3</button>
+        </div>
+    </div>
+    <span>
+        <p>Selected Ingredients: </p>
+        <button type="button" class="clear" id="clear">Clear</button>
+    </span>
+    <div>
+        <button type="button" class="enter" id="enter">Enter:</button>
+    </div>
+    <div></div>
+    <script src="cooking.js"></script>
 </body>
-
 </html>
