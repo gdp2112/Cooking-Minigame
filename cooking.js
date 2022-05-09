@@ -1,14 +1,28 @@
 const para = document.querySelector('p');
 const btns = document.querySelectorAll('button[class=selection]');
 const ingredients = [];
-btns.disabled = false;
+const clear = document.querySelector('.clear');
+clear.disabled = true;
+const enter = document.querySelector('.enter');
+enter.disabled = true;
 
+/--eventListeners for all ingredient buttons--/
 btns.forEach(btn => {
     btn.addEventListener('click', event => {
-        ingredients.push(toString(btn.textContent));
-        if (ingredients.length = 5){
-            document.querySelectorAll('button[class=selection]').disabled = true
-        };
+        ingredients.push(btn.textContent);
         para.textContent += btn.textContent + ', ';
-    })
+    });
+})
+
+
+clear.addEventListener('click', event => {
+    for(i = ingredients.length; i > 0; i--){
+        ingredients.pop();
+    };
+    para.textContent = 'Selected Ingredients: ';
+})
+
+
+enter.addEventListener('click', event => {
+    
 })
